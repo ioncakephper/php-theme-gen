@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ioncakephper/php-theme-gen/compare/v1.1.0...v1.2.0) (2025-08-09)
+
+
+### Features
+
+* Add quick demo and update README for clarity and usage instructions ([5a95076](https://github.com/ioncakephper/php-theme-gen/commit/5a95076d8d973b5de01f5edc5ca5f1f436d18fe9))
+
 ## [1.1.0](https://github.com/ioncakephper/php-theme-gen/compare/v1.0.0...v1.1.0) (2025-08-09)
 
 ### Features
