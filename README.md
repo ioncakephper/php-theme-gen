@@ -1,4 +1,4 @@
-# PHP Theme Generator CLI
+# WordPress Theme PHP Files Generator
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md) [![Build Status](https://github.com/ioncakephper/php-theme-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ioncakephper/php-theme-gen/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/ioncakephper/php-theme-gen/branch/main/graph/badge.svg)](https://codecov.io/gh/ioncakephper/php-theme-gen) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Changelog](https://img.shields.io/badge/changelog-keep_a_changelog-blue.svg)](CHANGELOG.md)
 
@@ -13,6 +13,7 @@ A command-line interface (CLI) that streamlines WordPress theme development. It 
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Quick demo](#quick-demo)
 - [🚀 Usage](#-usage)
   - [`build` Command](#build-command)
   - [`new` Command](#new-command)
@@ -88,9 +89,73 @@ A command-line interface (CLI) that streamlines WordPress theme development. It 
   # npx php-theme-gen build demo/index.html --output demo/mytheme
   ```
 
+### Quick demo
+
+Create `demo/index.html` with the following content:
+
+```html
+<!-- wp:file name="header" -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegant Page with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 font-sans">
+    <header class="bg-white shadow-md"></header>
+    <!-- /wp:file -->
+
+    <main class="container mx-auto px-6 py-12">
+      <!-- Hero Section -->
+      <section class="text-center mb-16">
+        <h1 class="text-5xl font-extrabold text-gray-900 mb-4">
+          Build Your Elegant Website
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          A beautiful and responsive starting point for your next project.
+        </p>
+        <a
+          href="#"
+          class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
+          >Get Started</a
+        >
+      </section>
+    </main>
+
+    <!-- wp:file name="footer" -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-6 py-12"></div>
+      <div class="bg-gray-900 py-4">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+          &copy; 2025 MyLogo. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- /wp:file -->
+```
+
+The file contains HTML code and `<~-- wp-file ... -->` and `<!-- /wp:file -->` pair to designate the `php` filename and the content for that file.
+
+Invoke `phphen`:
+
+```bash
+phpgen build demo/index.html --output demo/mytheme
+```
+
+It generates the following files in `demo/mytheme`:
+
+- `header.php`
+- `footer.php`
+- `index.php`
+- `style.css`
+
 ## 🚀 Usage
 
-The `php-theme-gen` CLI tool allows you to quickly generate a WordPress theme structure from a single HTML file.
+The `phpgen` CLI tool allows you to quickly generate a WordPress theme structure from a single HTML file.
 
 ### `build` Command
 
@@ -119,7 +184,7 @@ node src/index.js build <sourceFile> [options]
 To generate a theme from `demo/index.html` into the `demo/mytheme` directory with a custom theme name:
 
 ```bash
-node src/index.js build demo/index.html --output demo/mytheme --themeName "My Elegant Theme" --author "Your Name" --description "An elegant WordPress theme."
+phpgen build demo/index.html --output demo/mytheme --themeName "My Elegant Theme" --author "Your Name" --description "An elegant WordPress theme."
 ```
 
 This command will create the following files in `demo/mytheme`:
@@ -134,7 +199,7 @@ This command will create the following files in `demo/mytheme`:
 The `new` command generates a new HTML template file with basic WordPress theme tags. This is useful for quickly starting a new theme development.
 
 ```bash
-node src/index.js new <templateName> [options]
+phpgen new <templateName> [options]
 ```
 
 **Arguments:**
@@ -150,7 +215,7 @@ node src/index.js new <templateName> [options]
 To create a new HTML template named `about-us.html` in the `templates` directory:
 
 ```bash
-node src/index.js new about-us --output templates
+phpgen new about-us --output templates
 ```
 
 ## 🚀 Available Scripts

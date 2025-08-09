@@ -2,11 +2,10 @@
 
 ## 1.0.0 (2025-08-09)
 
-
 ### Features
 
-* Add CLI tool to generate WordPress themes from HTML ([f882b55](https://github.com/ioncakephper/php-theme-gen/commit/f882b55dc7d755eb808c49e61a36bce8d29be34b))
-* Enhance README and package.json for clarity and discoverability ([8487c36](https://github.com/ioncakephper/php-theme-gen/commit/8487c3632b144f2cc4b7c453051b66ecd5aa2bfe))
+- Add CLI tool to generate WordPress themes from HTML ([f882b55](https://github.com/ioncakephper/php-theme-gen/commit/f882b55dc7d755eb808c49e61a36bce8d29be34b))
+- Enhance README and package.json for clarity and discoverability ([8487c36](https://github.com/ioncakephper/php-theme-gen/commit/8487c3632b144f2cc4b7c453051b66ecd5aa2bfe))
 
 ## [1.2.0](https://github.com/ioncakephper/php-theme-gen/compare/v1.1.0...v1.2.0) (2025-07-07)
 
