@@ -9,36 +9,38 @@ A command-line interface (CLI) that streamlines WordPress theme development. It 
 
 ## 📚 Table of Contents
 
-- [✨ Key Features](#-key-features)
-- [🚀 Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Quick demo](#quick-demo)
-- [🚀 Usage](#-usage)
-  - [`build` Command](#build-command)
-  - [`new` Command](#new-command)
-- [🚀 Available Scripts](#-available-scripts)
-  - [Automated Documentation](#automated-documentation)
-  - [Code Quality & Formatting](#code-quality--formatting)
-  - [Core Development](#core-development)
-  - [The "One-Click" Pre-Commit Workflow](#the-one-click-pre-commit-workflow)
-- [A Focus on Quality and Productivity](#a-focus-on-quality-and-productivity)
-  - [The Cost of Stale Documentation](#the-cost-of-stale-documentation)
-  - [The Power of Workflow Scripts](#the-power-of-workflow-scripts)
-- [📦 Release & Versioning](#-release--versioning)
-  - [How it Works](#how-it-works)
-  - [Creating a New Release](#creating-a-new-release)
-    - [Your First Release](#your-first-release)
-- [📁 Project Structure](#-project-structure)
-- [✍️ Linting for Documentation](#-linting-for-documentation)
-  - [How to Check for Missing Documentation](#how-to-check-for-missing-documentation)
-  - [Example](#example)
-- [🤝 Contributing](#-contributing)
-- [🗺️ Roadmap](#-roadmap)
-- [⚖️ Code of Conduct](#-code-of-conduct)
-- [🙏 Acknowledgements](#-acknowledgements)
-- [👨‍💻 About the Author](#-about-the-author)
-- [📄 License](#-license)
+- [WordPress Theme PHP Files Generator](#wordpress-theme-php-files-generator)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [✨ Key Features](#-key-features)
+  - [🚀 Getting Started](#-getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Quick demo](#quick-demo)
+  - [🚀 Usage](#-usage)
+    - [`build` Command](#build-command)
+    - [`new` Command](#new-command)
+  - [🚀 Available Scripts](#-available-scripts)
+    - [Automated Documentation](#automated-documentation)
+    - [Code Quality \& Formatting](#code-quality--formatting)
+    - [Core Development](#core-development)
+    - [The "One-Click" Pre-Commit Workflow](#the-one-click-pre-commit-workflow)
+  - [A Focus on Quality and Productivity](#a-focus-on-quality-and-productivity)
+    - [The Cost of Stale Documentation](#the-cost-of-stale-documentation)
+    - [The Power of Workflow Scripts](#the-power-of-workflow-scripts)
+  - [📦 Release \& Versioning](#-release--versioning)
+    - [How it Works](#how-it-works)
+    - [Creating a New Release](#creating-a-new-release)
+      - [Your First Release](#your-first-release)
+  - [📁 Project Structure](#-project-structure)
+  - [✍️ Linting for Documentation](#️-linting-for-documentation)
+    - [How to Check for Missing Documentation](#how-to-check-for-missing-documentation)
+    - [Example](#example)
+  - [🤝 Contributing](#-contributing)
+  - [🗺️ Roadmap](#️-roadmap)
+  - [⚖️ Code of Conduct](#️-code-of-conduct)
+  - [🙏 Acknowledgements](#-acknowledgements)
+  - [👨‍💻 About the Author](#-about-the-author)
+  - [📄 License](#-license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -313,15 +315,12 @@ For more details, refer to the [release-please documentation](https://github.com
 
 ```plaintext
 .
-├── -p/
-
 ├── .github/           # GitHub Actions workflows
 │   └── workflows/
 │       ├── ci.yml             # Continuous Integration (CI) workflow
 │       ├── publish.yml
 │       └── release-please.yml
 ├── .qodo/
-
 ├── demo/
 │   ├── mytheme/
 │   │   ├── footer.php
@@ -357,7 +356,6 @@ For more details, refer to the [release-please documentation](https://github.com
 ├── package.json       # Project metadata and dependencies
 └── README.md          # This file
 ```
-
 <!-- END PROJECT STRUCTURE -->
 
 ## ✍️ Linting for Documentation
