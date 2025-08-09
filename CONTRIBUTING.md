@@ -1,4 +1,4 @@
-# Contributing to JS Starter Template
+# Contributing to WordPress Theme PHP Files Generator
 
 ## Code of Conduct
 
