@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "A robust starter template for modern Node.js development, pre-configured with Jest for testing, ESLint for linting, and Prettier for code formatting.",
   "main": "src/index.js",
+  "bin": {
+    "phpgen": "src/index.js"
+  },
   "scripts": {
     "start": "node src/index.js",
     "test": "jest",
@@ -72,9 +75,9 @@
   },
   "homepage": "https://github.com/ioncakephper/php-theme-gen#readme",
   "devDependencies": {
+    "doctoc": "^2.2.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "doctoc": "^2.2.1",
     "eslint-plugin-jsdoc": "^48.2.3",
     "eslint-plugin-markdown": "^3.0.1",
     "jest": "^29.7.0",
@@ -85,5 +88,8 @@
   },
   "overrides": {
     "undici": "5.28.4"
+  },
+  "dependencies": {
+    "commander": "^14.0.0"
   }
 }

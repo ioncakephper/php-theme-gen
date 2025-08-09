@@ -2,48 +2,51 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md) [![Build Status](https://github.com/ioncakephper/php-theme-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ioncakephper/php-theme-gen/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/ioncakephper/php-theme-gen/branch/main/graph/badge.svg)](https://codecov.io/gh/ioncakephper/php-theme-gen) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Changelog](https://img.shields.io/badge/changelog-keep_a_changelog-blue.svg)](CHANGELOG.md)
 
-A command-line interface (CLI) that generates a WordPress theme structure from a single HTML file. This tool creates `header.php` and `footer.php` files by extracting content from the provided HTML file, using `<!-- wp:file ... -->` and `<!-- /wp:file -->` comment tags to identify the relevant sections.
+A command-line interface (CLI) that streamlines WordPress theme development. It generates a complete WordPress theme structure (including `header.php`, `footer.php`, `index.php`, `style.css`, and `functions.php`) from a single HTML file, using `<!-- wp:file ... -->` comment tags for content separation. It also provides a command to quickly scaffold new HTML templates.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## 📚 Table of Contents
 
-- [PHP Theme Generator CLI](#php-theme-generator-cli)
-  - [📚 Table of Contents](#-table-of-contents)
-  - [✨ Key Features](#-key-features)
-  - [🚀 Getting Started](#-getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Using this Template](#using-this-template)
-      - [Method 1: GitHub Template (Recommended)](#method-1-github-template-recommended)
-      - [Method 2: Using `degit` (for a local copy)](#method-2-using-degit-for-a-local-copy)
-  - [🚀 Available Scripts](#-available-scripts)
-    - [Automated Documentation](#automated-documentation)
-    - [Code Quality \& Formatting](#code-quality--formatting)
-    - [Core Development](#core-development)
-    - [The "One-Click" Pre-Commit Workflow](#the-one-click-pre-commit-workflow)
-  - [A Focus on Quality and Productivity](#a-focus-on-quality-and-productivity)
-    - [The Cost of Stale Documentation](#the-cost-of-stale-documentation)
-    - [The Power of Workflow Scripts](#the-power-of-workflow-scripts)
-  - [📦 Release \& Versioning](#-release--versioning)
-    - [How it Works](#how-it-works)
-    - [Creating a New Release](#creating-a-new-release)
-      - [Your First Release](#your-first-release)
-  - [📁 Project Structure](#-project-structure)
-  - [✍️ Linting for Documentation](#️-linting-for-documentation)
-    - [How to Check for Missing Documentation](#how-to-check-for-missing-documentation)
-    - [Example](#example)
-  - [🤝 Contributing](#-contributing)
-  - [🗺️ Roadmap](#️-roadmap)
-  - [⚖️ Code of Conduct](#️-code-of-conduct)
-  - [🙏 Acknowledgements](#-acknowledgements)
-  - [👨‍💻 About the Author](#-about-the-author)
-  - [📄 License](#-license)
+- [✨ Key Features](#-key-features)
+- [🚀 Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [🚀 Usage](#-usage)
+  - [`build` Command](#build-command)
+  - [`new` Command](#new-command)
+- [🚀 Available Scripts](#-available-scripts)
+  - [Automated Documentation](#automated-documentation)
+  - [Code Quality & Formatting](#code-quality--formatting)
+  - [Core Development](#core-development)
+  - [The "One-Click" Pre-Commit Workflow](#the-one-click-pre-commit-workflow)
+- [A Focus on Quality and Productivity](#a-focus-on-quality-and-productivity)
+  - [The Cost of Stale Documentation](#the-cost-of-stale-documentation)
+  - [The Power of Workflow Scripts](#the-power-of-workflow-scripts)
+- [📦 Release & Versioning](#-release--versioning)
+  - [How it Works](#how-it-works)
+  - [Creating a New Release](#creating-a-new-release)
+    - [Your First Release](#your-first-release)
+- [📁 Project Structure](#-project-structure)
+- [✍️ Linting for Documentation](#-linting-for-documentation)
+  - [How to Check for Missing Documentation](#how-to-check-for-missing-documentation)
+  - [Example](#example)
+- [🤝 Contributing](#-contributing)
+- [🗺️ Roadmap](#-roadmap)
+- [⚖️ Code of Conduct](#-code-of-conduct)
+- [🙏 Acknowledgements](#-acknowledgements)
+- [👨‍💻 About the Author](#-about-the-author)
+- [📄 License](#-license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## ✨ Key Features
 
+- **WordPress Theme Generation**: Quickly generate a full WordPress theme (including `header.php`, `footer.php`, `index.php`, `style.css`, and `functions.php`) from a single HTML file.
+- **HTML-to-PHP Conversion**: Intelligently extracts content based on `<!-- wp:file ... -->` and `<!-- /wp:file -->` HTML comment tags to create corresponding PHP template files.
+- **Customizable Theme Metadata**: Easily define theme name, author, description, and other details via CLI options, which are automatically included in `style.css` and PHP file headers.
+- **HTML Template Scaffolding**: Generate new HTML template files pre-configured with `wp:file` tags, accelerating new page development.
 - **Comprehensive Testing Suite**: Pre-configured with Jest for unit and integration testing. Includes coverage reporting out-of-the-box to ensure code quality.
 - **Automated Code Quality**: A strict, pre-configured setup using ESLint and Prettier to catch errors, enforce best practices, and maintain a consistent code style across all files (`.js`, `.md`, `.json`).
 - **Enforced Documentation Standards**: Integrated `eslint-plugin-jsdoc` to require JSDoc comments for all functions, improving code clarity and long-term maintainability.
@@ -59,42 +62,96 @@ A command-line interface (CLI) that generates a WordPress theme structure from a
 
 - Node.js version 18.0.0 or higher
 
-### Using this Template
+## Installation
 
-There are two recommended ways to use this template to start your project.
+1. Install the package globally (recommended):
 
-#### Method 1: GitHub Template (Recommended)
+   ```bash
+   npm install -g php-theme-gen
+   ```
 
-This is the best approach for creating a new repository on GitHub that is linked to this template.
+   The `phpgen` app is available globally. In any folder on your computer, check it runs:
 
-1.  Click the green **"Use this template"** button on the [main repository page](https://github.com/ioncakephper/php-theme-gen).
-2.  Select **"Create a new repository"**.
-3.  Give your new repository a name and description, then create it.
-4.  Clone your newly created repository to your local machine, replacing `YOUR_USERNAME` and `YOUR_REPOSITORY_NAME`:
-    ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-    ```
-5.  Navigate into the project directory and install the dependencies:
-    ```bash
-    cd YOUR_REPOSITORY_NAME
-    npm install
-    ```
-6.  You're all set! Start building your application in the `src` directory.
+   ```bash
+   phpgen -V
+   ```
 
-#### Method 2: Using `degit` (for a local copy)
+2. Execute the package directly, using the `npx` command:
 
-If you want a clean copy of the template files on your local machine without the full Git history, you can use `degit`.
+```bash
+npx php-theme-gen [options] [command] [arguments]
 
-1.  Run the following command in your terminal, replacing `my-new-project` with your desired folder name:
-    ```bash
-    npx degit ioncakephper/php-theme-gen my-new-project
-    ```
-2.  Navigate into your new project directory and install the dependencies:
-    ```bash
-    cd my-new-project
-    npm install
-    ```
-3.  You're all set! You can now initialize a new Git repository (`git init`) and start building.
+# e.g. for help
+# npx php-theme-gen -h
+
+# e.g. to build theme from index.html
+# npx php-theme-gen build demo/index.html --output demo/mytheme
+```
+
+## 🚀 Usage
+
+The `php-theme-gen` CLI tool allows you to quickly generate a WordPress theme structure from a single HTML file.
+
+### `build` Command
+
+The `build` command is used to process your HTML file and generate the theme files.
+
+```bash
+node src/index.js build <sourceFile> [options]
+```
+
+**Arguments:**
+
+- `<sourceFile>`: The path to your source HTML file. This file should contain `<!-- wp:file name="header" -->` and `<!-- wp:file name="footer" -->` HTML comments to delineate the header and footer sections.
+
+**Options:**
+
+- `-o, --output <dir>`: The output directory for the generated theme files. Defaults to `dist`.
+- `--themeName <name>`: The name of your WordPress theme. This will be used in the theme's `style.css` and PHP file headers. Defaults to `MyTheme`.
+- `--themeURI <uri>`: The URI of your theme.
+- `--author <name>`: The author of the theme.
+- `--authorURI <uri>`: The author's URI.
+- `--description <text>`: A brief description of your theme.
+- `--tags <tags>`: Comma-separated tags for your theme (e.g., `blog, responsive`).
+
+**Example:**
+
+To generate a theme from `demo/index.html` into the `demo/mytheme` directory with a custom theme name:
+
+```bash
+node src/index.js build demo/index.html --output demo/mytheme --themeName "My Elegant Theme" --author "Your Name" --description "An elegant WordPress theme."
+```
+
+This command will create the following files in `demo/mytheme`:
+
+- `header.php`
+- `footer.php`
+- `index.php` (or the basename of your source file, e.g., `demo.php`)
+- `style.css`
+
+### `new` Command
+
+The `new` command generates a new HTML template file with basic WordPress theme tags. This is useful for quickly starting a new theme development.
+
+```bash
+node src/index.js new <templateName> [options]
+```
+
+**Arguments:**
+
+- `<templateName>`: The name of the HTML template file to create (e.g., `my-page`). The tool will create `<templateName>.html`.
+
+**Options:**
+
+- `-o, --output <dir>`: The output directory for the new template file. Defaults to the current directory (`.`).
+
+**Example:**
+
+To create a new HTML template named `about-us.html` in the `templates` directory:
+
+```bash
+node src/index.js new about-us --output templates
+```
 
 ## 🚀 Available Scripts
 
@@ -191,14 +248,35 @@ For more details, refer to the [release-please documentation](https://github.com
 
 ```plaintext
 .
+├── -p/
+
 ├── .github/           # GitHub Actions workflows
 │   └── workflows/
 │       ├── ci.yml             # Continuous Integration (CI) workflow
 │       ├── publish.yml
 │       └── release-please.yml
+├── .qodo/
+
+├── demo/
+│   ├── mytheme/
+│   │   ├── footer.php
+│   │   ├── header.php
+│   │   ├── index.php
+│   │   └── style.css
+│   └── index.html
 ├── src/               # Source code
-│   └── index.js # Main application entry point
+│   ├── commands/
+│   │   ├── build.js
+│   │   └── new.js
+│   ├── utils/
+│   │   ├── createThemeFile.js
+│   │   └── loadCommands.js
+│   ├── cli.js
+│   ├── index.js   # Main application entry point
+│   └── program.js
 ├── tests/
+│   ├── utils/
+│   │   └── createThemeFile.test.js
 │   └── index.test.js
 ├── .eslintignore      # Files/folders for ESLint to ignore
 ├── .eslintrc.json     # ESLint configuration

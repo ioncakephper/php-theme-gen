@@ -1,0 +1,160 @@
+<!-- wp:file name="header" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Page with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900 flex items-center space-x-2">
+                <svg class="h-7 w-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.519 4.674c.3.921-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.519-4.674a1 1 0 00-.363-1.118L2.929 9.091c-.783-.57-.381-1.81.588-1.81h4.915a1 1 0 00.95-.69l1.519-4.674z"></path></svg>
+                <span>MyLogo</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Blog</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu (initially hidden) -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 px-6 py-4 bg-white shadow-md">
+            <a href="#" class="block text-gray-600 hover:text-gray-900 py-2">Home</a>
+            <a href="#" class="block text-gray-600 hover:text-gray-900 py-2">About</a>
+            <a href="#" class="block text-gray-600 hover:text-gray-900 py-2">Blog</a>
+            <a href="#" class="block text-gray-600 hover:text-gray-900 py-2">Contact</a>
+        </div>
+    </header>
+    <!-- /wp:file -->
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">Build Your Elegant Website</h1>
+            <p class="text-lg text-gray-600 mb-8">A beautiful and responsive starting point for your next project.</p>
+            <a href="#" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">Get Started</a>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-16">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Modern Design</h3>
+                    <p class="text-gray-600">Clean and elegant design built with the latest technologies.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fully Responsive</h3>
+                    <p class="text-gray-600">Looks great on any device, from mobile to desktop.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V4a2 2 0 012-2h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Easy to Customize</h3>
+                    <p class="text-gray-600">Simple to modify and extend for your own needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rich Content Section -->
+        <section class="bg-white rounded-lg shadow p-8 md:p-12 mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Discover Our Story</h2>
+            <div class="prose max-w-none text-gray-600">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <blockquote class="border-l-4 border-blue-500 pl-4 italic">
+                    <p>"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."</p>
+                    <cite class="font-bold not-italic">- Steve Jobs</cite>
+                </blockquote>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.</p>
+                <h3>A Gallery of Moments</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                    <img src="https://via.placeholder.com/400x300.png/007bff/ffffff?text=Nature" alt="Placeholder Image" class="rounded-lg shadow-sm">
+                    <img src="https://via.placeholder.com/400x300.png/28a745/ffffff?text=City" alt="Placeholder Image" class="rounded-lg shadow-sm">
+                    <img src="https://via.placeholder.com/400x300.png/ffc107/ffffff?text=People" alt="Placeholder Image" class="rounded-lg shadow-sm">
+                    <img src="https://via.placeholder.com/400x300.png/dc3545/ffffff?text=Work" alt="Placeholder Image" class="rounded-lg shadow-sm">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- wp:file name="footer" -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Widget Area 1: About Us -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">About Us</h4>
+                    <p class="text-gray-400">We are a team of passionate developers creating beautiful and functional web experiences. Our mission is to provide tools that empower creators.</p>
+                </div>
+                <!-- Widget Area 2: Recent Posts -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Recent Posts</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">The Future of Web Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">A Guide to Modern CSS</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Understanding JavaScript Frameworks</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">WordPress Development Tips</a></li>
+                    </ul>
+                </div>
+                <!-- Widget Area 3: Categories -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Inspiration</a></li>
+                    </ul>
+                </div>
+                <!-- Widget Area 4: Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <p class="text-gray-400">123 Elegant Street<br>City, State 54321</p>
+                    <p class="text-gray-400 mt-2">Email: contact@myelegant.site</p>
+                    <p class="text-gray-400">Phone: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-900 py-4">
+            <div class="container mx-auto px-6 text-center text-gray-500">
+                &copy; 2025 MyLogo. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- /wp:file -->
+
+    <script>
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuItems = mobileMenu.querySelectorAll('a');
+
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden'); // Hide the menu
+            });
+        });
+    </script>
+</body>
+</html>
