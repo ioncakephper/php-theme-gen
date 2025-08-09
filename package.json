@@ -66,7 +66,15 @@
   "keywords": [
     "javascript",
     "starter",
-    "node"
+    "node",
+    "wordpress",
+    "theme",
+    "generator",
+    "cli",
+    "html-to-php",
+    "scaffolding",
+    "development",
+    "php"
   ],
   "author": "Ion Gireada (https://github.com/ioncakephper)",
   "license": "MIT",

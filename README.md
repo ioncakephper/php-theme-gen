@@ -12,7 +12,7 @@ A command-line interface (CLI) that streamlines WordPress theme development. It 
 - [✨ Key Features](#-key-features)
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
-- [Installation](#installation)
+  - [Installation](#installation)
 - [🚀 Usage](#-usage)
   - [`build` Command](#build-command)
   - [`new` Command](#new-command)
@@ -62,31 +62,31 @@ A command-line interface (CLI) that streamlines WordPress theme development. It 
 
 - Node.js version 18.0.0 or higher
 
-## Installation
+### Installation
 
-1. Install the package globally (recommended):
+- Install the package globally (recommended):
 
-   ```bash
-   npm install -g php-theme-gen
-   ```
+  ```bash
+  npm install -g php-theme-gen
+  ```
 
-   The `phpgen` app is available globally. In any folder on your computer, check it runs:
+  The `phpgen` app is available globally. In any folder on your computer, check it runs:
 
-   ```bash
-   phpgen -V
-   ```
+  ```bash
+  phpgen -V
+  ```
 
-2. Execute the package directly, using the `npx` command:
+- Execute the package directly, using the `npx` command:
 
-```bash
-npx php-theme-gen [options] [command] [arguments]
+  ```bash
+  npx php-theme-gen [options] [command] [arguments]
 
-# e.g. for help
-# npx php-theme-gen -h
+  # e.g. for help
+  # npx php-theme-gen -h
 
-# e.g. to build theme from index.html
-# npx php-theme-gen build demo/index.html --output demo/mytheme
-```
+  # e.g. to build theme from index.html
+  # npx php-theme-gen build demo/index.html --output demo/mytheme
+  ```
 
 ## 🚀 Usage
 
