@@ -44,7 +44,7 @@ A command-line interface (CLI) that streamlines WordPress theme development. It 
 
 ## ✨ Key Features
 
-- **WordPress Theme Generation**: Quickly generate a full WordPress theme (including `header.php`, `footer.php`, `index.php`, `style.css`, and `functions.php`) from a single HTML file.
+- **WordPress Theme Generation**: Quickly generate a full WordPress theme (including `header.php`, `footer.php`, `index.php`, and `style.css`) from a single HTML file.
 - **HTML-to-PHP Conversion**: Intelligently extracts content based on `<!-- wp:file ... -->` and `<!-- /wp:file -->` HTML comment tags to create corresponding PHP template files.
 - **Customizable Theme Metadata**: Easily define theme name, author, description, and other details via CLI options, which are automatically included in `style.css` and PHP file headers.
 - **HTML Template Scaffolding**: Generate new HTML template files pre-configured with `wp:file` tags, accelerating new page development.
